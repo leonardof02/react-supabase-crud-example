@@ -1,5 +1,5 @@
 import supabase from "@/services/supabase/supabaseClient";
-import Todo from "./Todo.type";
+import Todo from "../../components/Todo.type";
 
 async function checkTodo(id: number, newValue: boolean) {
   const { error } = await supabase.from("Todo").update({ isCompleted: newValue }).eq("id", id);

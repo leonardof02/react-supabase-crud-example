@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Todo from "./Todo.type";
-import { getAllTodos } from "./Todo.service";
+import { getAllTodos } from "../services/supabase/Todo.service";
 
 export default function useTodos() {
   const [todos, setTodos] = useState<Todo[]>([]);

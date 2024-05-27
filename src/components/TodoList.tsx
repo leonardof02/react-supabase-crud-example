@@ -3,10 +3,11 @@ import React, { useEffect, useState } from "react";
 import TodoItem from "./TodoItem";
 import TodoModal from "./TodoModal";
 import Todo from "./Todo.type";
-import { checkTodo, createTodo, deleteTodo, editTodo } from "./Todo.service";
+import { checkTodo, createTodo, deleteTodo, editTodo } from "../services/supabase/Todo.service";
 import useTodos from "./useTodos.hook";
 
 export default function TodoList() {
+
   const [editingTodo, setEditingTodo] = useState<Todo | null>(null);
   const [modalIsOpen, setModalOpen] = useState<boolean>(false);
 
